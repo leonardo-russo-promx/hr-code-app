@@ -13,6 +13,23 @@ export interface CurrentUser {
 }
 
 let cached: CurrentUser | null = null;
+const CONTEXT_TIMEOUT_MS = 12000;
+
+function withTimeout<T>(promise: Promise<T>, ms: number, message: string): Promise<T> {
+  return new Promise((resolve, reject) => {
+    const timer = setTimeout(() => reject(new Error(message)), ms);
+    promise.then(
+      (value) => {
+        clearTimeout(timer);
+        resolve(value);
+      },
+      (error) => {
+        clearTimeout(timer);
+        reject(error);
+      },
+    );
+  });
+}
 
 /**
  * Resolves the signed-in Power Apps user to their Dataverse systemuser and
@@ -21,7 +38,11 @@ let cached: CurrentUser | null = null;
 export async function getCurrentUser(): Promise<CurrentUser> {
   if (cached) return cached;
 
-  const ctx = await getContext();
+  const ctx = await withTimeout(
+    getContext(),
+    CONTEXT_TIMEOUT_MS,
+    'Power Apps context timed out. Open this app via the "Local Play" URL from the dev server output.',
+  );
   const user: CurrentUser = {
     fullName: ctx.user.fullName ?? 'User',
     email: ctx.user.userPrincipalName,

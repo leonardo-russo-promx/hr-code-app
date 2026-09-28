@@ -11,11 +11,13 @@ import { loadOnboardingState, onboardingProgress } from '../lib/onboarding';
 export function HomePage() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
+  const [userName, setUserName] = useState<string>('User');
   const [employeeCount, setEmployeeCount] = useState<number | null>(null);
   const [manager, setManager] = useState<string | undefined>();
   const [managerPhoto, setManagerPhoto] = useState<string | undefined>();
   const [remainingDays, setRemainingDays] = useState<number | undefined>();
   const [recent, setRecent] = useState<RequestVM[]>([]);
+  const firstName = userName.trim().split(/\s+/)[0] || 'User';
 
   useEffect(() => {
     let active = true;
@@ -29,6 +31,7 @@ export function HomePage() {
           getMyRequests(user.bookableResourceId),
         ]);
         if (!active) return;
+        setUserName(user.fullName ?? 'User');
         setEmployeeCount(count);
         setManager(mgr?.name);
         setManagerPhoto(mgr?.photoUrl);
@@ -54,7 +57,7 @@ export function HomePage() {
   return (
     <main className="page">
       <div className="page__header">
-        <h1>Welcome back</h1>
+        <h1>Welcome back {firstName}</h1>
         <div className="page__subtitle">Your HR overview at a glance.</div>
       </div>
 

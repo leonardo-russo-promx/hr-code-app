@@ -4,6 +4,15 @@ This template provides a minimal setup to get React working in Vite with HMR and
 
 It is preconfigured to work with Power Apps Code Apps.
 
+## Running locally with Dataverse data
+
+This app must be opened through the **Power Apps Local Play** URL shown by `npm run dev`.  
+Opening `http://localhost:5173` (or `127.0.0.1`) directly can load the UI but cannot reliably provide Power Apps runtime context/connectors, so data calls may never resolve.
+
+1. Run `npm run dev`
+2. Copy the `Local Play` URL from the terminal output
+3. Open that URL in a browser where you're signed in to the same Power Platform environment
+
 Currently, two official plugins are available:
 
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
