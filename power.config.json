@@ -1,0 +1,84 @@
+{
+  "version": "1.0",
+  "appId": "9c066e7f-a558-4a62-99c6-8f5441aa8044",
+  "appDisplayName": "HR Portal",
+  "region": "prod",
+  "appType": "CodeApp",
+  "environmentId": "46909147-be21-e105-8e23-4f771279df5b",
+  "description": " ",
+  "buildPath": "./dist",
+  "buildEntryPoint": "index.html",
+  "localAppUrl": "http://localhost:3000",
+  "logoPath": "Default",
+  "connectionReferences": {
+    "7281ab4e-7062-433c-89e7-baf06cbc49f3": {
+      "id": "/providers/Microsoft.PowerApps/apis/shared_microsoftcopilotstudio",
+      "displayName": "Microsoft Copilot Studio",
+      "dataSources": [
+        "microsoftcopilotstudio"
+      ],
+      "authenticationType": "oauthDefault",
+      "dataSets": {}
+    },
+    "60256be0-c14f-4656-bae9-e077a687551e": {
+      "id": "/providers/Microsoft.PowerApps/apis/shared_office365users",
+      "displayName": "Office 365 Users",
+      "dataSources": [
+        "office365users"
+      ],
+      "dataSets": {}
+    }
+  },
+  "databaseReferences": {
+    "default.cds": {
+      "dataSources": {
+        "absencerequests": {
+          "entitySetName": "promx_holidayrequests",
+          "logicalName": "promx_holidayrequest",
+          "isHidden": false
+        },
+        "holidayallowances": {
+          "entitySetName": "promx_holidayallowances",
+          "logicalName": "promx_holidayallowance",
+          "isHidden": false
+        },
+        "bookableresources": {
+          "entitySetName": "bookableresources",
+          "logicalName": "bookableresource",
+          "isHidden": false
+        },
+        "publicholidays": {
+          "entitySetName": "promx_localholidaies",
+          "logicalName": "promx_localholiday",
+          "isHidden": false
+        },
+        "holidayareas": {
+          "entitySetName": "promx_holidayareas",
+          "logicalName": "promx_holidayarea",
+          "isHidden": false
+        },
+        "users": {
+          "entitySetName": "systemusers",
+          "logicalName": "systemuser",
+          "isHidden": false
+        },
+        "bookableresourcecharacteristics": {
+          "entitySetName": "bookableresourcecharacteristics",
+          "logicalName": "bookableresourcecharacteristic",
+          "isHidden": false
+        },
+        "characteristics": {
+          "entitySetName": "characteristics",
+          "logicalName": "characteristic",
+          "isHidden": false
+        },
+        "ratingvalues": {
+          "entitySetName": "ratingvalues",
+          "logicalName": "ratingvalue",
+          "isHidden": false
+        }
+      },
+      "environmentVariableName": ""
+    }
+  }
+}

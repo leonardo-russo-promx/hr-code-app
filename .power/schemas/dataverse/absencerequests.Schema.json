@@ -1,0 +1,1089 @@
+{
+  "name": "promx_holidayrequest",
+  "title": "Absence Requests",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "x-ms-dataverse-entity": true,
+      "x-ms-dataverse-entityset": "promx_holidayrequests",
+      "x-ms-dataverse-primary-id": "promx_holidayrequestid",
+      "x-ms-dataverse-primary-name": "promx_name",
+      "properties": {
+        "createdby": {
+          "type": "string",
+          "title": "Created By",
+          "x-ms-dataverse-attribute": "createdby",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "CreatedBy",
+          "x-ms-read-only": true
+        },
+        "createdbyname": {
+          "type": "string",
+          "title": "createdbyname",
+          "x-ms-dataverse-attribute": "createdbyname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "CreatedByName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "createdbyyominame": {
+          "type": "string",
+          "title": "createdbyyominame",
+          "x-ms-dataverse-attribute": "createdbyyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "CreatedByYomiName",
+          "x-ms-read-only": true,
+          "required": true,
+          "maxLength": 100
+        },
+        "createdon": {
+          "type": "string",
+          "title": "Created On",
+          "x-ms-dataverse-attribute": "createdon",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "CreatedOn",
+          "x-ms-read-only": true
+        },
+        "createdonbehalfby": {
+          "type": "string",
+          "title": "Created By (Delegate)",
+          "x-ms-dataverse-attribute": "createdonbehalfby",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "CreatedOnBehalfBy",
+          "x-ms-read-only": true
+        },
+        "createdonbehalfbyname": {
+          "type": "string",
+          "title": "createdonbehalfbyname",
+          "x-ms-dataverse-attribute": "createdonbehalfbyname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "CreatedOnBehalfByName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "createdonbehalfbyyominame": {
+          "type": "string",
+          "title": "createdonbehalfbyyominame",
+          "x-ms-dataverse-attribute": "createdonbehalfbyyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "CreatedOnBehalfByYomiName",
+          "x-ms-read-only": true,
+          "required": true,
+          "maxLength": 100
+        },
+        "importsequencenumber": {
+          "type": "string",
+          "title": "Import Sequence Number",
+          "x-ms-dataverse-attribute": "importsequencenumber",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "ImportSequenceNumber"
+        },
+        "modifiedby": {
+          "type": "string",
+          "title": "Modified By",
+          "x-ms-dataverse-attribute": "modifiedby",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "ModifiedBy",
+          "x-ms-read-only": true
+        },
+        "modifiedbyname": {
+          "type": "string",
+          "title": "modifiedbyname",
+          "x-ms-dataverse-attribute": "modifiedbyname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ModifiedByName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "modifiedbyyominame": {
+          "type": "string",
+          "title": "modifiedbyyominame",
+          "x-ms-dataverse-attribute": "modifiedbyyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ModifiedByYomiName",
+          "x-ms-read-only": true,
+          "required": true,
+          "maxLength": 100
+        },
+        "modifiedon": {
+          "type": "string",
+          "title": "Modified On",
+          "x-ms-dataverse-attribute": "modifiedon",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "ModifiedOn",
+          "x-ms-read-only": true
+        },
+        "modifiedonbehalfby": {
+          "type": "string",
+          "title": "Modified By (Delegate)",
+          "x-ms-dataverse-attribute": "modifiedonbehalfby",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "ModifiedOnBehalfBy",
+          "x-ms-read-only": true
+        },
+        "modifiedonbehalfbyname": {
+          "type": "string",
+          "title": "modifiedonbehalfbyname",
+          "x-ms-dataverse-attribute": "modifiedonbehalfbyname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ModifiedOnBehalfByName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "modifiedonbehalfbyyominame": {
+          "type": "string",
+          "title": "modifiedonbehalfbyyominame",
+          "x-ms-dataverse-attribute": "modifiedonbehalfbyyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "ModifiedOnBehalfByYomiName",
+          "x-ms-read-only": true,
+          "required": true,
+          "maxLength": 100
+        },
+        "overriddencreatedon": {
+          "type": "string",
+          "title": "Record Created On",
+          "x-ms-dataverse-attribute": "overriddencreatedon",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "OverriddenCreatedOn"
+        },
+        "ownerid": {
+          "type": "string",
+          "title": "Owner",
+          "x-ms-dataverse-attribute": "ownerid",
+          "x-ms-dataverse-type": "OwnerType",
+          "x-ms-schema-name": "OwnerId",
+          "required": true
+        },
+        "owneridname": {
+          "type": "string",
+          "title": "owneridname",
+          "x-ms-dataverse-attribute": "owneridname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "OwnerIdName",
+          "x-ms-read-only": true,
+          "required": true,
+          "maxLength": 100
+        },
+        "owneridtype": {
+          "type": "string",
+          "title": "owneridtype",
+          "x-ms-dataverse-attribute": "owneridtype",
+          "x-ms-dataverse-type": "EntityNameType",
+          "x-ms-schema-name": "OwnerIdType",
+          "required": true
+        },
+        "owneridyominame": {
+          "type": "string",
+          "title": "owneridyominame",
+          "x-ms-dataverse-attribute": "owneridyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "OwnerIdYomiName",
+          "x-ms-read-only": true,
+          "required": true,
+          "maxLength": 100
+        },
+        "owningbusinessunit": {
+          "type": "string",
+          "title": "Owning Business Unit",
+          "x-ms-dataverse-attribute": "owningbusinessunit",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "OwningBusinessUnit",
+          "x-ms-read-only": true
+        },
+        "owningbusinessunitname": {
+          "type": "string",
+          "title": "owningbusinessunitname",
+          "x-ms-dataverse-attribute": "owningbusinessunitname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "OwningBusinessUnitName",
+          "x-ms-read-only": true,
+          "maxLength": 160
+        },
+        "owningteam": {
+          "type": "string",
+          "title": "Owning Team",
+          "x-ms-dataverse-attribute": "owningteam",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "OwningTeam",
+          "x-ms-read-only": true
+        },
+        "owninguser": {
+          "type": "string",
+          "title": "Owning User",
+          "x-ms-dataverse-attribute": "owninguser",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "OwningUser",
+          "x-ms-read-only": true
+        },
+        "promx_absence": {
+          "type": "string",
+          "title": "promx_absence",
+          "x-ms-dataverse-attribute": "promx_absence",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "promx_absence",
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "192c673b-7cc4-f011-bbd3-7c1e5277b7b6",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Absence",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "promx_absencename": {
+          "type": "string",
+          "title": "promx_absencename",
+          "x-ms-dataverse-attribute": "promx_absencename",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "promx_absenceName",
+          "x-ms-read-only": true
+        },
+        "promx_alloweddays": {
+          "type": "string",
+          "title": "Allowed Days",
+          "x-ms-dataverse-attribute": "promx_alloweddays",
+          "x-ms-dataverse-type": "DecimalType",
+          "x-ms-schema-name": "promx_AllowedDays"
+        },
+        "promx_approvalcomment": {
+          "type": "string",
+          "title": "Approval Comment",
+          "x-ms-dataverse-attribute": "promx_approvalcomment",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "promx_ApprovalComment",
+          "maxLength": 100
+        },
+        "promx_approvaltype": {
+          "type": "string",
+          "title": "Approval type",
+          "x-ms-dataverse-attribute": "promx_approvaltype",
+          "x-ms-dataverse-type": "PicklistType",
+          "x-ms-schema-name": "promx_Approvaltype",
+          "enum": [
+            "Automatic",
+            "Manual",
+            "Manual change"
+          ],
+          "x-ms-enum-values": [
+            596440000,
+            596440001,
+            596440002
+          ],
+          "Color": [
+            "#0000ff",
+            "#0000ff",
+            "#0000ff"
+          ],
+          "x-ms-optionsetmetadataid": "433e8660-7e7b-eb11-a812-0022489ad8c6",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Approval type",
+          "x-ms-optionSetType": "Picklist"
+        },
+        "promx_approvaltypename": {
+          "type": "string",
+          "title": "promx_approvaltypename",
+          "x-ms-dataverse-attribute": "promx_approvaltypename",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "promx_approvaltypeName",
+          "x-ms-read-only": true
+        },
+        "promx_approvedbyid": {
+          "type": "string",
+          "title": "Last Approved/Rejected By",
+          "x-ms-dataverse-attribute": "promx_approvedbyid",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "promx_ApprovedById"
+        },
+        "promx_approvedbyidname": {
+          "type": "string",
+          "title": "promx_approvedbyidname",
+          "x-ms-dataverse-attribute": "promx_approvedbyidname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "promx_ApprovedByIdName",
+          "x-ms-read-only": true,
+          "maxLength": 200
+        },
+        "promx_approvedbyidyominame": {
+          "type": "string",
+          "title": "promx_approvedbyidyominame",
+          "x-ms-dataverse-attribute": "promx_approvedbyidyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "promx_ApprovedByIdYomiName",
+          "x-ms-read-only": true,
+          "maxLength": 200
+        },
+        "promx_approveddays": {
+          "type": "string",
+          "title": "Approved Days",
+          "x-ms-dataverse-attribute": "promx_approveddays",
+          "x-ms-dataverse-type": "DecimalType",
+          "x-ms-schema-name": "promx_ApprovedDays"
+        },
+        "promx_approvedon": {
+          "type": "string",
+          "title": "Last Approved/Rejected On",
+          "x-ms-dataverse-attribute": "promx_approvedon",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "promx_ApprovedOn"
+        },
+        "promx_approvereject": {
+          "type": "string",
+          "title": "Approve/Reject",
+          "x-ms-dataverse-attribute": "promx_approvereject",
+          "x-ms-dataverse-type": "PicklistType",
+          "x-ms-schema-name": "promx_ApproveReject",
+          "enum": [
+            "Approve",
+            "Reject"
+          ],
+          "x-ms-enum-values": [
+            596440000,
+            596440001
+          ],
+          "Color": [
+            "#0000ff",
+            "#0000ff"
+          ],
+          "x-ms-optionsetmetadataid": "463e8660-7e7b-eb11-a812-0022489ad8c6",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Approve/Reject",
+          "x-ms-optionSetType": "Picklist"
+        },
+        "promx_approverejectname": {
+          "type": "string",
+          "title": "promx_approverejectname",
+          "x-ms-dataverse-attribute": "promx_approverejectname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "promx_approverejectName",
+          "x-ms-read-only": true
+        },
+        "promx_approverid": {
+          "type": "string",
+          "title": "Approver",
+          "x-ms-dataverse-attribute": "promx_approverid",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "promx_ApproverId"
+        },
+        "promx_approveridname": {
+          "type": "string",
+          "title": "promx_approveridname",
+          "x-ms-dataverse-attribute": "promx_approveridname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "promx_ApproverIdName",
+          "x-ms-read-only": true,
+          "maxLength": 200
+        },
+        "promx_approveridyominame": {
+          "type": "string",
+          "title": "promx_approveridyominame",
+          "x-ms-dataverse-attribute": "promx_approveridyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "promx_ApproverIdYomiName",
+          "x-ms-read-only": true,
+          "maxLength": 200
+        },
+        "promx_automaticallyapproveholidayrequests": {
+          "type": "string",
+          "title": "Automatically Approve Absence Requests",
+          "x-ms-dataverse-attribute": "promx_automaticallyapproveholidayrequests",
+          "x-ms-dataverse-type": "PicklistType",
+          "x-ms-schema-name": "promx_AutomaticallyApproveHolidayRequests",
+          "enum": [
+            "Not specified",
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            596440000,
+            596440001,
+            596440002
+          ],
+          "Color": [
+            "#0000ff",
+            "#0000ff",
+            "#0000ff"
+          ],
+          "x-ms-optionsetmetadataid": "2609219f-dcfe-427e-b56e-c68c710fc109",
+          "x-ms-isGlobal": true,
+          "x-ms-optionsetdisplayname": "Automatically Approve Absence Requests",
+          "x-ms-optionSetType": "Picklist"
+        },
+        "promx_automaticallyapproveholidayrequestsname": {
+          "type": "string",
+          "title": "promx_automaticallyapproveholidayrequestsname",
+          "x-ms-dataverse-attribute": "promx_automaticallyapproveholidayrequestsname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "promx_automaticallyapproveholidayrequestsName",
+          "x-ms-read-only": true
+        },
+        "promx_description": {
+          "type": "string",
+          "title": "Description",
+          "x-ms-dataverse-attribute": "promx_description",
+          "x-ms-dataverse-type": "MemoType",
+          "x-ms-schema-name": "promx_Description",
+          "maxLength": 2000
+        },
+        "promx_externalapproval": {
+          "type": "string",
+          "title": "External Approval",
+          "x-ms-dataverse-attribute": "promx_externalapproval",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "promx_externalapproval",
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "40d328d9-6cae-ee11-a569-0022489cbf0b",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "External Approval",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "promx_externalapprovalname": {
+          "type": "string",
+          "title": "promx_externalapprovalname",
+          "x-ms-dataverse-attribute": "promx_externalapprovalname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "promx_externalapprovalName",
+          "x-ms-read-only": true
+        },
+        "promx_from": {
+          "type": "string",
+          "title": "Start",
+          "x-ms-dataverse-attribute": "promx_from",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "promx_From",
+          "required": true
+        },
+        "promx_fromhalfday": {
+          "type": "string",
+          "title": "Start Half Day",
+          "x-ms-dataverse-attribute": "promx_fromhalfday",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "promx_fromhalfday",
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "edb05fbf-075e-ef11-bfe3-0022489b966a",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Start Half Day",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "promx_fromhalfdayname": {
+          "type": "string",
+          "title": "promx_fromhalfdayname",
+          "x-ms-dataverse-attribute": "promx_fromhalfdayname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "promx_fromhalfdayName",
+          "x-ms-read-only": true
+        },
+        "promx_fromyear": {
+          "type": "string",
+          "title": "From Year",
+          "x-ms-dataverse-attribute": "promx_fromyear",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "promx_FromYear"
+        },
+        "promx_holidayallowanceid": {
+          "type": "string",
+          "title": "Holiday Allowance",
+          "x-ms-dataverse-attribute": "promx_holidayallowanceid",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "promx_HolidayAllowanceId",
+          "required": true
+        },
+        "promx_holidayallowanceidname": {
+          "type": "string",
+          "title": "promx_holidayallowanceidname",
+          "x-ms-dataverse-attribute": "promx_holidayallowanceidname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "promx_HolidayAllowanceIdName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "promx_holidayallowanceyear": {
+          "type": "string",
+          "title": "Holiday Allowance Year",
+          "x-ms-dataverse-attribute": "promx_holidayallowanceyear",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "promx_HolidayAllowanceYear"
+        },
+        "promx_holidayrequestid": {
+          "type": "string",
+          "title": "Absence Request",
+          "x-ms-dataverse-attribute": "promx_holidayrequestid",
+          "x-ms-dataverse-type": "UniqueidentifierType",
+          "x-ms-schema-name": "promx_holidayrequestId",
+          "x-ms-dataverse-primary-id": true,
+          "required": true,
+          "x-ms-keyType": "primary"
+        },
+        "promx_holidayrequestsid": {
+          "type": "string",
+          "title": "Holiday Area",
+          "x-ms-dataverse-attribute": "promx_holidayrequestsid",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "promx_HolidayRequestsId"
+        },
+        "promx_holidayrequestsidname": {
+          "type": "string",
+          "title": "promx_holidayrequestsidname",
+          "x-ms-dataverse-attribute": "promx_holidayrequestsidname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "promx_HolidayRequestsIdName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "promx_holidaytype": {
+          "type": "string",
+          "title": "Type",
+          "x-ms-dataverse-attribute": "promx_holidaytype",
+          "x-ms-dataverse-type": "PicklistType",
+          "x-ms-schema-name": "promx_Holidaytype",
+          "required": true,
+          "enum": [
+            "Statutory Holiday",
+            "Other - Sickness",
+            "Other - Parental Leave",
+            "Other - Childcare",
+            "Other - Doctor's Appointment",
+            "Other - Bereavement",
+            "Other - Remaining",
+            "Public Holiday"
+          ],
+          "x-ms-enum-values": [
+            596440000,
+            596440001,
+            596440002,
+            596440003,
+            596440004,
+            596440005,
+            596440019,
+            596440099
+          ],
+          "Color": [
+            "#FFCCCB",
+            "#FFFFCC",
+            "#FFFFCC",
+            "#FFFFCC",
+            "#FFFFCC",
+            "#FFFFCC",
+            "#FFFFCC",
+            "#D7F0FF"
+          ],
+          "x-ms-optionsetmetadataid": "493e8660-7e7b-eb11-a812-0022489ad8c6",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Type",
+          "x-ms-optionSetType": "Picklist"
+        },
+        "promx_holidaytypename": {
+          "type": "string",
+          "title": "promx_holidaytypename",
+          "x-ms-dataverse-attribute": "promx_holidaytypename",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "promx_holidaytypeName",
+          "x-ms-read-only": true
+        },
+        "promx_leaveid": {
+          "type": "string",
+          "title": "LeaveId",
+          "x-ms-dataverse-attribute": "promx_leaveid",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "promx_leaveid",
+          "maxLength": 100
+        },
+        "promx_lengthtype": {
+          "type": "string",
+          "title": "Length type",
+          "x-ms-dataverse-attribute": "promx_lengthtype",
+          "x-ms-dataverse-type": "PicklistType",
+          "x-ms-schema-name": "promx_Lengthtype",
+          "required": true,
+          "enum": [
+            "Multiple days",
+            "One day",
+            "Morning",
+            "Afternoon"
+          ],
+          "x-ms-enum-values": [
+            596440000,
+            596440001,
+            596440002,
+            596440003
+          ],
+          "Color": [
+            "#0000ff",
+            "#0000ff",
+            "#0000ff",
+            "#0000ff"
+          ],
+          "x-ms-optionsetmetadataid": "4c3e8660-7e7b-eb11-a812-0022489ad8c6",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Length type",
+          "x-ms-optionSetType": "Picklist"
+        },
+        "promx_lengthtypename": {
+          "type": "string",
+          "title": "promx_lengthtypename",
+          "x-ms-dataverse-attribute": "promx_lengthtypename",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "promx_lengthtypeName",
+          "x-ms-read-only": true
+        },
+        "promx_localholidayid": {
+          "type": "string",
+          "title": "Public Holiday",
+          "x-ms-dataverse-attribute": "promx_localholidayid",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "promx_LocalHolidayId"
+        },
+        "promx_localholidayidname": {
+          "type": "string",
+          "title": "promx_localholidayidname",
+          "x-ms-dataverse-attribute": "promx_localholidayidname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "promx_LocalHolidayIdName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "promx_name": {
+          "type": "string",
+          "title": "Name",
+          "x-ms-dataverse-attribute": "promx_name",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "promx_name",
+          "x-ms-dataverse-primary-name": true,
+          "maxLength": 100
+        },
+        "promx_remainingdays": {
+          "type": "string",
+          "title": "Remaining Days",
+          "x-ms-dataverse-attribute": "promx_remainingdays",
+          "x-ms-dataverse-type": "DecimalType",
+          "x-ms-schema-name": "promx_RemainingDays",
+          "x-ms-read-only": true
+        },
+        "promx_requesteddays": {
+          "type": "string",
+          "title": "Requested Days",
+          "x-ms-dataverse-attribute": "promx_requesteddays",
+          "x-ms-dataverse-type": "DecimalType",
+          "x-ms-schema-name": "promx_RequestedDays"
+        },
+        "promx_resourceid": {
+          "type": "string",
+          "title": "Resource",
+          "x-ms-dataverse-attribute": "promx_resourceid",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "promx_ResourceId",
+          "required": true
+        },
+        "promx_resourceidname": {
+          "type": "string",
+          "title": "promx_resourceidname",
+          "x-ms-dataverse-attribute": "promx_resourceidname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "promx_ResourceIdName",
+          "x-ms-read-only": true,
+          "maxLength": 100
+        },
+        "promx_resourcename": {
+          "type": "string",
+          "title": "Resource Name",
+          "x-ms-dataverse-attribute": "promx_resourcename",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "promx_ResourceName",
+          "maxLength": 100
+        },
+        "promx_sicknesshandlingforallowedholidays": {
+          "type": "string",
+          "title": "Absence Handling for Allowed Holidays",
+          "x-ms-dataverse-attribute": "promx_sicknesshandlingforallowedholidays",
+          "x-ms-dataverse-type": "PicklistType",
+          "x-ms-schema-name": "promx_sicknesshandlingforallowedholidays",
+          "enum": [
+            "Included",
+            "Excluded"
+          ],
+          "x-ms-enum-values": [
+            796280000,
+            796280001
+          ],
+          "Color": [
+            "#0000ff",
+            "#0000ff"
+          ],
+          "x-ms-optionsetmetadataid": "69a15db5-4395-4c80-bdab-9e11ddd8b2da",
+          "x-ms-isGlobal": true,
+          "x-ms-optionsetdisplayname": "Include / Exclude Absences",
+          "x-ms-optionSetType": "Picklist"
+        },
+        "promx_sicknesshandlingforallowedholidaysname": {
+          "type": "string",
+          "title": "promx_sicknesshandlingforallowedholidaysname",
+          "x-ms-dataverse-attribute": "promx_sicknesshandlingforallowedholidaysname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "promx_sicknesshandlingforallowedholidaysName",
+          "x-ms-read-only": true
+        },
+        "promx_source": {
+          "type": "string",
+          "title": "Source",
+          "x-ms-dataverse-attribute": "promx_source",
+          "x-ms-dataverse-type": "PicklistType",
+          "x-ms-schema-name": "promx_source",
+          "enum": [
+            "Absence Management",
+            "Time Entry"
+          ],
+          "x-ms-enum-values": [
+            796280000,
+            796280001
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "d81c7f58-c1e2-484c-9c27-31d2daf868e3",
+          "x-ms-isGlobal": true,
+          "x-ms-optionsetdisplayname": "Request Source",
+          "x-ms-optionSetType": "Picklist"
+        },
+        "promx_sourceentityid": {
+          "type": "string",
+          "title": "Source Entity ID",
+          "x-ms-dataverse-attribute": "promx_sourceentityid",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "promx_SourceEntityID",
+          "maxLength": 36
+        },
+        "promx_sourcename": {
+          "type": "string",
+          "title": "promx_sourcename",
+          "x-ms-dataverse-attribute": "promx_sourcename",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "promx_sourceName",
+          "x-ms-read-only": true
+        },
+        "promx_specialleave": {
+          "type": "string",
+          "title": "promx_specialleave",
+          "x-ms-dataverse-attribute": "promx_specialleave",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "promx_specialleave",
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "79c74843-7cc4-f011-bbd3-7c1e5277b7b6",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Special Leave",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "promx_specialleavename": {
+          "type": "string",
+          "title": "promx_specialleavename",
+          "x-ms-dataverse-attribute": "promx_specialleavename",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "promx_specialleaveName",
+          "x-ms-read-only": true
+        },
+        "promx_submit": {
+          "type": "string",
+          "title": "Submit? (deprecated)",
+          "x-ms-dataverse-attribute": "promx_submit",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "promx_submit",
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            "#0000ff",
+            "#0000ff"
+          ],
+          "x-ms-optionsetmetadataid": "4f3e8660-7e7b-eb11-a812-0022489ad8c6",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Submit? (deprecated)",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "promx_submitname": {
+          "type": "string",
+          "title": "promx_submitname",
+          "x-ms-dataverse-attribute": "promx_submitname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "promx_submitName",
+          "x-ms-read-only": true
+        },
+        "promx_submittedbyid": {
+          "type": "string",
+          "title": "Submitted By",
+          "x-ms-dataverse-attribute": "promx_submittedbyid",
+          "x-ms-dataverse-type": "LookupType",
+          "x-ms-schema-name": "promx_submittedbyid"
+        },
+        "promx_submittedbyidname": {
+          "type": "string",
+          "title": "promx_submittedbyidname",
+          "x-ms-dataverse-attribute": "promx_submittedbyidname",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "promx_submittedbyidName",
+          "x-ms-read-only": true,
+          "maxLength": 200
+        },
+        "promx_submittedbyidyominame": {
+          "type": "string",
+          "title": "promx_submittedbyidyominame",
+          "x-ms-dataverse-attribute": "promx_submittedbyidyominame",
+          "x-ms-dataverse-type": "StringType",
+          "x-ms-schema-name": "promx_submittedbyidYomiName",
+          "x-ms-read-only": true,
+          "maxLength": 200
+        },
+        "promx_submittedon": {
+          "type": "string",
+          "title": "Submitted On",
+          "x-ms-dataverse-attribute": "promx_submittedon",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "promx_submittedon"
+        },
+        "promx_to": {
+          "type": "string",
+          "title": "End",
+          "x-ms-dataverse-attribute": "promx_to",
+          "x-ms-dataverse-type": "DateTimeType",
+          "x-ms-schema-name": "promx_To"
+        },
+        "promx_tohalfday": {
+          "type": "string",
+          "title": "End Half Day",
+          "x-ms-dataverse-attribute": "promx_tohalfday",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "promx_tohalfday",
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "341f5fc5-075e-ef11-bfe3-0022489b966a",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "End Half Day",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "promx_tohalfdayname": {
+          "type": "string",
+          "title": "promx_tohalfdayname",
+          "x-ms-dataverse-attribute": "promx_tohalfdayname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "promx_tohalfdayName",
+          "x-ms-read-only": true
+        },
+        "promx_totalrequesteddaysperallowance": {
+          "type": "string",
+          "title": "Total Requested Days per Allowance",
+          "x-ms-dataverse-attribute": "promx_totalrequesteddaysperallowance",
+          "x-ms-dataverse-type": "DecimalType",
+          "x-ms-schema-name": "promx_TotalRequestedDaysperAllowance"
+        },
+        "promx_toyear": {
+          "type": "string",
+          "title": "To Year",
+          "x-ms-dataverse-attribute": "promx_toyear",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "promx_ToYear"
+        },
+        "promx_vacation": {
+          "type": "string",
+          "title": "promx_vacation",
+          "x-ms-dataverse-attribute": "promx_vacation",
+          "x-ms-dataverse-type": "BooleanType",
+          "x-ms-schema-name": "promx_vacation",
+          "enum": [
+            "No",
+            "Yes"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "7cc74843-7cc4-f011-bbd3-7c1e5277b7b6",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Vacation",
+          "x-ms-optionSetType": "Boolean"
+        },
+        "promx_vacationname": {
+          "type": "string",
+          "title": "promx_vacationname",
+          "x-ms-dataverse-attribute": "promx_vacationname",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "promx_vacationName",
+          "x-ms-read-only": true
+        },
+        "statecode": {
+          "type": "string",
+          "title": "Status",
+          "x-ms-dataverse-attribute": "statecode",
+          "x-ms-dataverse-type": "StateType",
+          "x-ms-schema-name": "statecode",
+          "required": true,
+          "enum": [
+            "Active",
+            "Inactive"
+          ],
+          "x-ms-enum-values": [
+            0,
+            1
+          ],
+          "Color": [
+            null,
+            null
+          ],
+          "x-ms-optionsetmetadataid": "b23d8660-7e7b-eb11-a812-0022489ad8c6",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Status",
+          "x-ms-optionSetType": "State"
+        },
+        "statecodename": {
+          "type": "string",
+          "title": "statecodename",
+          "x-ms-dataverse-attribute": "statecodename",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "statecodeName",
+          "x-ms-read-only": true
+        },
+        "statuscode": {
+          "type": "string",
+          "title": "Status Reason",
+          "x-ms-dataverse-attribute": "statuscode",
+          "x-ms-dataverse-type": "StatusType",
+          "x-ms-schema-name": "statuscode",
+          "enum": [
+            "Draft",
+            "Submitted",
+            "Approved",
+            "Rejected",
+            "Cancellation Requested",
+            "Cancelled"
+          ],
+          "x-ms-enum-values": [
+            596440003,
+            1,
+            596440001,
+            596440002,
+            796280001,
+            2
+          ],
+          "Color": [
+            "#4094e0",
+            "#ad6fdd",
+            "#60cb97",
+            "#fb7676",
+            "#c8bb4d",
+            "#969ca8"
+          ],
+          "x-ms-optionsetmetadataid": "c23d8660-7e7b-eb11-a812-0022489ad8c6",
+          "x-ms-isGlobal": false,
+          "x-ms-optionsetdisplayname": "Status Reason",
+          "x-ms-optionSetType": "Status"
+        },
+        "statuscodename": {
+          "type": "string",
+          "title": "statuscodename",
+          "x-ms-dataverse-attribute": "statuscodename",
+          "x-ms-dataverse-type": "VirtualType",
+          "x-ms-schema-name": "statuscodeName",
+          "x-ms-read-only": true
+        },
+        "timezoneruleversionnumber": {
+          "type": "string",
+          "title": "Time Zone Rule Version Number",
+          "x-ms-dataverse-attribute": "timezoneruleversionnumber",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "TimeZoneRuleVersionNumber"
+        },
+        "utcconversiontimezonecode": {
+          "type": "string",
+          "title": "UTC Conversion Time Zone Code",
+          "x-ms-dataverse-attribute": "utcconversiontimezonecode",
+          "x-ms-dataverse-type": "IntegerType",
+          "x-ms-schema-name": "UTCConversionTimeZoneCode"
+        },
+        "versionnumber": {
+          "type": "string",
+          "title": "Version Number",
+          "x-ms-dataverse-attribute": "versionnumber",
+          "x-ms-dataverse-type": "BigIntType",
+          "x-ms-schema-name": "VersionNumber",
+          "x-ms-read-only": true
+        }
+      },
+      "required": [
+        "createdbyyominame",
+        "createdonbehalfbyyominame",
+        "modifiedbyyominame",
+        "modifiedonbehalfbyyominame",
+        "ownerid",
+        "owneridname",
+        "owneridtype",
+        "owneridyominame",
+        "promx_from",
+        "promx_holidayallowanceid",
+        "promx_holidayrequestid",
+        "promx_holidaytype",
+        "promx_lengthtype",
+        "promx_resourceid",
+        "statecode"
+      ]
+    }
+  }
+}
