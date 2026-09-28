@@ -10,6 +10,8 @@ export interface CurrentUser {
   systemUserId?: string;
   bookableResourceId?: string;
   bookableResourceName?: string;
+  organizationalUnitId?: string;
+  organizationalUnitName?: string;
 }
 
 let cached: CurrentUser | null = null;
@@ -67,7 +69,12 @@ export async function getCurrentUser(): Promise<CurrentUser> {
 
     if (user.systemUserId) {
       const br = await BookableresourcesService.getAll({
-        select: ['bookableresourceid', 'name'],
+        select: [
+          'bookableresourceid',
+          'name',
+          '_msdyn_organizationalunit_value',
+          'msdyn_organizationalunitname',
+        ],
         filter: `_userid_value eq ${user.systemUserId}`,
         top: 1,
       });
@@ -75,6 +82,8 @@ export async function getCurrentUser(): Promise<CurrentUser> {
       if (rec) {
         user.bookableResourceId = rec.bookableresourceid as string;
         user.bookableResourceName = rec.name as string;
+        user.organizationalUnitId = rec._msdyn_organizationalunit_value;
+        user.organizationalUnitName = rec.msdyn_organizationalunitname;
       }
     }
   } catch (err) {

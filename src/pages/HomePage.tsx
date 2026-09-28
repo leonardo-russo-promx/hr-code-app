@@ -4,7 +4,7 @@ import { KpiCard } from '../components/KpiCard';
 import { StatusBadge } from '../components/StatusBadge';
 import { Loader, EmptyState, ErrorState } from '../components/States';
 import { getCurrentUser } from '../lib/currentUser';
-import { getEmployeeCount, getMyManager, getMyRemainingDays, getMyRequests, type RequestVM } from '../lib/hrData';
+import { getMyManager, getMyRemainingDays, getMyRequests, type RequestVM } from '../lib/hrData';
 import { formatDate, formatDays } from '../lib/format';
 import { loadOnboardingState, onboardingProgress } from '../lib/onboarding';
 
@@ -12,7 +12,7 @@ export function HomePage() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
   const [userName, setUserName] = useState<string>('User');
-  const [employeeCount, setEmployeeCount] = useState<number | null>(null);
+  const [subsidiary, setSubsidiary] = useState<string | undefined>();
   const [manager, setManager] = useState<string | undefined>();
   const [managerPhoto, setManagerPhoto] = useState<string | undefined>();
   const [remainingDays, setRemainingDays] = useState<number | undefined>();
@@ -24,15 +24,14 @@ export function HomePage() {
     (async () => {
       try {
         const user = await getCurrentUser();
-        const [count, mgr, remaining, requests] = await Promise.all([
-          getEmployeeCount(),
+        const [mgr, remaining, requests] = await Promise.all([
           getMyManager(user.bookableResourceId, user.upn),
           getMyRemainingDays(user.bookableResourceId),
           getMyRequests(user.bookableResourceId),
         ]);
         if (!active) return;
         setUserName(user.fullName ?? 'User');
-        setEmployeeCount(count);
+        setSubsidiary(user.organizationalUnitName);
         setManager(mgr?.name);
         setManagerPhoto(mgr?.photoUrl);
         setRemainingDays(remaining);
@@ -63,10 +62,10 @@ export function HomePage() {
 
       <div className="kpi-grid">
         <KpiCard
-          icon="👥"
-          label="Total employees"
-          value={employeeCount !== null ? String(employeeCount) : '—'}
-          hint="Active employees in the organisation"
+          icon="🏢"
+          label="Your current subsidiary"
+          value={subsidiary ?? 'Not assigned'}
+          hint="Organizational unit from your employee profile"
         />
         <KpiCard
           icon="👤"
