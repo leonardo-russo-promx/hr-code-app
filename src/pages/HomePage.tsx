@@ -6,7 +6,6 @@ import { Loader, EmptyState, ErrorState } from '../components/States';
 import { getCurrentUser } from '../lib/currentUser';
 import { getMyManager, getMyRemainingDays, getMyRequests, type RequestVM } from '../lib/hrData';
 import { formatDate, formatDays } from '../lib/format';
-import { loadOnboardingState, onboardingProgress } from '../lib/onboarding';
 
 export function HomePage() {
   const [loading, setLoading] = useState(true);
@@ -51,8 +50,6 @@ export function HomePage() {
   if (loading) return <main className="page"><Loader message="Loading your dashboard…" /></main>;
   if (error) return <main className="page"><ErrorState /></main>;
 
-  const onboarding = onboardingProgress(loadOnboardingState());
-
   return (
     <main className="page">
       <div className="page__header">
@@ -80,23 +77,6 @@ export function HomePage() {
           value={remainingDays !== undefined ? formatDays(remainingDays) : '—'}
           hint="Holiday days you can still request this year"
         />
-      </div>
-
-      <div className="card">
-        <div className="card__title" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-          <span>Onboarding progress</span>
-          <Link to="/onboarding" className="starter" style={{ textDecoration: 'none' }}>
-            {onboarding.completed === onboarding.total ? 'Review →' : 'Continue →'}
-          </Link>
-        </div>
-        <div className="progress">
-          <div className="progress__bar" style={{ width: `${onboarding.percent}%` }} />
-        </div>
-        <div className="progress__caption">
-          {onboarding.completed === onboarding.total
-            ? '🎉 All onboarding tasks complete!'
-            : `${onboarding.completed} of ${onboarding.total} tasks complete (${onboarding.percent}%)`}
-        </div>
       </div>
 
       <div className="card">

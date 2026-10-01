@@ -6,18 +6,14 @@ const NAV = [
   { to: '/', label: 'Home', icon: '🏠', end: true },
   { to: '/absences', label: 'Absence Requests', icon: '🗓️' },
   { to: '/holidays', label: 'Holidays', icon: '🌴' },
-  { to: '/skills', label: 'My Skills', icon: '⭐' },
   { to: '/faq', label: 'FAQ', icon: '💬' },
-  { to: '/onboarding', label: 'Onboarding', icon: '✅' },
 ];
 
 const TITLES: Record<string, string> = {
   '/': 'Home',
   '/absences': 'Absence Requests',
   '/holidays': 'Holidays',
-  '/skills': 'My Skills',
   '/faq': 'HR FAQ Assistant',
-  '/onboarding': 'Onboarding',
 };
 
 function initials(name: string): string {
